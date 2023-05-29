@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/assets.css') }}">
+    <title>{% block title %} {% endblock %} || M.Abdullah Elahi</title>
+</head>
+
+<body>
+
+    <nav class="nav" id="nav">
+        <section class="nav-section" id="logo"><a href="/">TalkGPT</a></section>
+        <section class="nav-section" id="links">
+            <ul class="n-list">
+                <li class="nav-list"><a href="/">Home</a></li>
+                <li class="nav-list"><a href="/">About</a></li>
+                <li class="nav-list"><a href="/">Sample</a></li>
+                <li class="nav-list"><a href="/">Services</a></li>
+                <li class="nav-list"><a href="/">Contact</a></li>
+                <li class="nav-list"><a href="/">Dashboard</a></li>
+            </ul>
+        </section>
+        <section class="nav-section" id="theme">
+            <label class="switch">
+                <input type="checkbox" class="switcher">
+                <span class="slider round"></span>
+            </label>
+        </section>
+    </nav>
+    <section class="burger">
+        <div class="b-line" id="line-1"></div>
+        <div class="b-line" id="line-2"></div>
+        <div class="b-line" id="line-3"></div>
+    </section>
+
+    {% block body %}{% endblock %}
+
+    <footer>
+
+        <section class="footer-section col-1">
+            <div class="col-top">
+                <h1 class="h s">About US!</h1>
+            </div>
+            <div class="col-bottom">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda distinctio quae dicta voluptas
+                    minus adipisci natus officia architecto non vitae quo hic, saepe at quidem aliquam nemo repudiandae
+                    iste porro quod minima totam. Velit aut sequi perspiciatis? Aliquam, dolorum quo.</p>
+            </div>
+        </section>
+
+        <span class="line o-v"></span>
+
+        <section class="footer-section col-2">
+            <div class="col-top">
+                <h1 class="h s">About TalkGPT!</h1>
+            </div>
+            <div class="col-bottom">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste eos perspiciatis, laboriosam harum
+                    veritatis quisquam ducimus soluta accusantium voluptate adipisci. Blanditiis illo, laudantium nulla
+                    atque natus, iure quo harum ad eius temporibus minus in, vel officia. Cum libero sint ut.</p>
+            </div>
+        </section>
+
+        <span class="line o-v"></span>
+
+        <section class="footer-section col-2">
+            <div class="col-top">
+                <h1 class="h s">Social Media!</h1>
+            </div>
+            <div class="col-bottom">
+                <p>Connect with us throught Social Platforms!</p><br>
+                <a href="#" class="s-links" id="fb"><i class="bi bi-facebook"></i>&nbsp;&nbsp;Facebook</a><br>
+                <a href="#" class="s-links" id="inst"><i class="bi bi-instagram"></i>&nbsp;&nbsp;Instagram</a><br>
+                <a href="#" class="s-links" id="twit"><i class="bi bi-twitter"></i>&nbsp;&nbsp;Twitter</a><br>
+            </div>
+        </section>        
+
+
+    </footer>
+
+</body>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</html>

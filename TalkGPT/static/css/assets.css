@@ -1,0 +1,145 @@
+/* buttons */
+
+button.btn {
+    padding: 0.5rem;
+    background: var(--btn-bg);
+    border: none;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+button.btn.rect {
+    padding: 0.5rem 1rem;
+}
+
+
+/* Menu Toggler */
+.burger {
+    position: absolute;
+    top: 15px;
+    right: 5%;
+    cursor: pointer;
+    display: none;
+}
+
+.b-line {
+    width: 2rem;
+    height: 4px;
+    background: var(--burger-color);
+    margin: 0.25rem;
+    border-radius: 0.25rem;
+    transition: .2s;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.5rem;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--togler-color);
+    transition: .4s;
+    box-shadow: 0px 0px 10px var(--toggle-shadow-color);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1rem;
+    width: 1rem;
+    left: 4px;
+    bottom: 0.25rem;
+    background-color: var(--togler-indicator-color);
+    transition: .4s;
+}
+
+.switch input:checked+.slider {
+    background-color: var(--togler-indicator-active-color);
+}
+
+.switch input:checked+.slider:before {
+    transform: translateX(25px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.line {
+    background: var(--obj-bg);
+    width: 100%;
+    height: 0.1rem;
+}
+
+.line.o-v {
+    transform: rotate(90deg)
+}
+
+.s-links {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+}
+.s-links i {
+    font-size: 1.5rem;
+}
+.s-links#fb:hover{
+    color: #3b5998;
+}
+.s-links#inst:hover{
+    background: linear-gradient(#feda75, #fa7e1e,  #d62976, #962fbf, #4f5bd5);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.s-links#twit:hover{
+    color:  #00acee;
+}
+
+@media screen and (max-width: 768px) {
+    .line.o-v {
+        transform: rotate(0deg);
+    }
+}
+
+@media screen and (max-width: 1044px) {
+    .line.o-v {
+        transform: rotate(0deg);
+    }
+    .burger {display: block;}
+
+    .showNav {
+        opacity: 1;
+    }
+    .line-1 {
+        transform: rotate(-45deg) translateY(11px) translateX(-10px);
+    }
+    .line-2 {
+        opacity: 0;
+    }
+    .line-3 {
+        transform: rotate(45deg) translateY(-2px);
+    }
+}
